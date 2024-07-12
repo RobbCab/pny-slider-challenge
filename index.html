@@ -4,17 +4,185 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="js/purejs.js"></script>
+<style>
+  body{
+    background:#000;
+    color: #FFF;
+    font-family:Roboto, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+  }
+  .page-wrapper{
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100vh;
+  }
+  .headerMain {
+    background: #222;
+    padding:16px;
+}
+.headerMain-outter{
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+}
+.headerMain-inner {
+  display: flex; 
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+}
+.headerMain-logoArea{
+  display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+}
+.logoMain{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  padding:26 0;
+}
+.logoMain img{max-height:32px;}
+.headerMain-textArea{
+  padding-left: 36px;;
+  margin-right: auto;
+}
+.jsSlider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    /* min-height: 660px;*/
+    background: #fff;
+    background: #fff;
+    background-image: url(images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 47%;
+    background-position: 90% 59%;
+}
 
+.jsSlider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  align-items: center;
+  min-height: 455px;
+}
+
+.jsSlider-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  color:#000;
+  padding: 0 80px;
+}
+
+.jsSlider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.jsSlider-button-prev {
+  left: 10px;
+}
+
+.jsSlider-button-next {
+  right: 10px;
+}
+.slide-text-wrapper{
+  max-width: 422px;
+    position: absolute;
+    top: 30%;
+    z-index: 101;
+}
+.slide-text-quote{
+  font-size: 24px;
+  font-weight: 200;
+}
+.slide-text-name{
+  font-weight: 600;
+}
+.slide-text-title{
+  color:#b8b8ba;
+}
+.slide-image {
+    width: 330px;
+    position: absolute;
+    top: 16%;
+    right: 10%;
+    z-index: 100;
+}
+</style>
   <title>Testimonial Slider Coding Challenge</title>
 
 </head>
 
 <body>
+  <div class="page-wrapper">
+    <header class="headerMain">
+        <div class="headerMain-outter">
+        <div class="headerMain-inner">
+            <div class="headerMain-logoArea">
+                <div class="logoMain">
+                    <img src="/images/pny-logo.png" alt="PNY Technologies Inc.">
+                </div>
+            </div>
 
-  <h1>Please insert your HTML and any links to external JavaScript, jQuery, or CSS files</h1>
-
+            <div class="headerMain-textArea">
+                Testimonal Slider Challenge
+            </div><!-- End zone 2-->
+        </div>
+      </div>
+    </header>
+    <section id="inroduction">
+      <h1>Please insert your HTML and any links to external JavaScript, jQuery, or CSS files</h1>
+    </section>
+    <section id="pureJavascript">
+      <div class="jsSlider">
+        <div class="jsSlider-container">
+          <div class="jsSlider-slide">
+            <div class="slide-text-wrapper">
+              <p class="slide-text-quote">I've been interested in coding for a while but never taken the jump, until now. I couldn't recommend this course enough. I'm now in the job of my dreams and so excited about the future."</p>
+              <p class="slide-text-name">Tanya Sinclair <span class="slide-text-title">UX Engineer</span></p>
+            </div>
+            <img class="slide-image" src="images/image-tanya.jpg" alt="Image of Tanya Sinclair"/>
+          </div>
+          <div class="jsSlider-slide">Slide 2</div>
+          <div class="jsSlider-slide">Slide 3</div>
+        </div>
+        <button class="jsSlider-button jsSlider-button-prev">Prev</button>
+        <button class="jsSlider-button jsSlider-button-next">Next</button>
+      </div>
+      
+    </section>
+  </div>
 </body>
 
 </html>
