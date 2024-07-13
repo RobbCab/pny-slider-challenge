@@ -19,6 +19,20 @@ document.addEventListener('DOMContentLoaded', function() {
       currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
       updatejsSlide();
     });
+    document.addEventListener('keydown', function(event) {
+      switch(event.key) {
+          case 'ArrowLeft':
+            currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+            updatejsSlide();
+              break;
+          case 'ArrowRight':
+            currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+            updatejsSlide();
+              break;
+          default:
+              break;
+      }
+  });
   
     window.addEventListener('resize', updatejsSlide);
     updatejsSlide();

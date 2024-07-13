@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <script type="text/javascript" src="./JS/purejs.js"></script>
 <style>
   body{
@@ -73,71 +73,91 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-width: 900px;
+    max-width: 1440px;
+    height:800px;
     margin: auto;
-    /* min-height: 660px;*/
     background: #fff;
-    background: #fff;
-    background-image: url(images/pattern-bg.svg);
+    background-image: url(./images/pattern-bg.svg);
     background-repeat: no-repeat;
-    background-size: 47%;
-    background-position: 90% 59%;
+    background-size: 740px;
+    background-position: 92% 37%;
 }
 
 .jsSlider-container {
   display: flex;
   transition: transform 0.5s ease;
   align-items: center;
-  min-height: 455px;
+  min-height: 800px;
 }
 
 .jsSlider-slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  color:#000;
-  padding: 0 80px;
+    min-width: 100%;
+    height:800px;
+    box-sizing: border-box;
+    color: #000;
+    padding: 0 152px 0 165px;
+    background-image: url(./images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-position-y: bottom;
 }
 
 .jsSlider-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: green;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: 60px;
 }
 
 .jsSlider-button-prev {
-  left: 10px;
 }
 
 .jsSlider-button-next {
-  right: 10px;
 }
-.slide-text-wrapper{
-  max-width: 422px;
+.slide-text-wrapper {
+    font-family: Inter, Helvetica, sans-serif;
+    width: 625px;
     position: absolute;
     top: 30%;
     z-index: 101;
+    background-image: url(./images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position-x: 95px;
+    padding-top: 36px;
 }
 .slide-text-quote{
-  font-size: 24px;
-  font-weight: 200;
+  font-size: 32px;
+  font-weight: 300;
 }
-.slide-text-name{
-  font-weight: 600;
+.slide-text-name {
+    font-weight: 700;
+    font-size: 22px;
 }
-.slide-text-title{
-  color:#b8b8ba;
+.slide-text-title {
+    color: #b8b8ba;
+    font-weight: 500;
 }
 .slide-image {
-    width: 330px;
-    position: absolute;
-    top: 16%;
-    right: 10%;
+    width: 560px;
+    position: relative;
+    top: 15.5%;
+    float: right;
     z-index: 100;
+    border-radius: 6px;
+}
+.button-wrapper {
+    background: #FFF;
+    width: 120px;
+    height: 60px;
+    display: flex;
+    position: relative;
+    bottom: 145px;
+    z-index: 102;
+    right: -780px;
+    border-radius: 30px;
+    box-shadow: 0 9px 35px rgba(0, 0, 0, .35);
 }
 </style>
   <title>Testimonial Slider Coding Challenge</title>
@@ -168,19 +188,25 @@
       <div class="jsSlider">
         <div class="jsSlider-container">
           <div class="jsSlider-slide">
+            <img class="slide-image" src="images/image-tanya.jpg" alt="Image of Tanya Sinclair"/>
             <div class="slide-text-wrapper">
-              <p class="slide-text-quote">I've been interested in coding for a while but never taken the jump, until now. I couldn't recommend this course enough. I'm now in the job of my dreams and so excited about the future."</p>
+              <p class="slide-text-quote">&OpenCurlyDoubleQuote; I've been interested in coding for a while but never taken the jump, until now. I couldn't recommend this course enough. I'm now in the job of my dreams and so excited about the future. &CloseCurlyDoubleQuote;</p>
               <p class="slide-text-name">Tanya Sinclair <span class="slide-text-title">UX Engineer</span></p>
             </div>
-            <img class="slide-image" src="images/image-tanya.jpg" alt="Image of Tanya Sinclair"/>
           </div>
-          <div class="jsSlider-slide">Slide 2</div>
-          <div class="jsSlider-slide">Slide 3</div>
+          <div class="jsSlider-slide">
+            <img class="slide-image" src="images/image-john.jpg" alt="Image of John Tarkpor"/>
+            <div class="slide-text-wrapper">
+              <p class="slide-text-quote">&OpenCurlyDoubleQuote; If you want to lay the best foundation possible I'd recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. &CloseCurlyDoubleQuote;</p>
+              <p class="slide-text-name">John Tarkpor <span class="slide-text-title">Junior Front-end Developer</span></p>
+            </div>
+          </div>
         </div>
-        <button class="jsSlider-button jsSlider-button-prev">Prev</button>
-        <button class="jsSlider-button jsSlider-button-next">Next</button>
+        <div class="button-wrapper">
+          <button class="jsSlider-button jsSlider-button-prev"><img src="./images/icon-prev.svg"></button>
+          <button class="jsSlider-button jsSlider-button-next"><img src="./images/icon-next.svg"></button>
+        </div>
       </div>
-      
     </section>
   </div>
 </body>
