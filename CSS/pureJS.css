@@ -58,56 +58,149 @@ body{
   margin-right: auto;
 }
 .jsSlider {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 1440px;
-    height:800px;
-    margin: auto;
-    background: #fff;
-    background-image: url(../images/pattern-bg.svg);
-    background-repeat: no-repeat;
-    background-size: 740px;
-    background-position: 92% 37%;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 576px;
+  height: 670px;
+  margin: auto;
+  background: #fff;
+  background-image: url(../images/pattern-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 330px;
+  background-position: center 35px;
 }
 
 .jsSlider-container {
   display: flex;
   transition: transform 0.5s ease;
   align-items: center;
-  min-height: 800px;
 }
 
 .jsSlider-slide {
     min-width: 100%;
-    height:800px;
+    height:670px;
     box-sizing: border-box;
     color: #000;
-    padding: 0 152px 0 165px;
+    padding: 0 30px 0 30px;
     background-image: url(../images/pattern-curve.svg);
     background-repeat: no-repeat;
     background-position-x: 0;
     background-position-y: bottom;
+    background-size: 260px;
+    text-align: center;
 }
 
 .jsSlider-button {
     background: transparent;
     border: none;
+    outline: none;
     padding: 10px;
     cursor: pointer;
     text-align: center;
     width: 60px;
 }
 .slide-text-wrapper {
+  font-family: Inter, Helvetica, sans-serif;
+  width: 100%;
+  position:relative;
+  top: 10%;
+  z-index: 101;
+  background-image: url(../images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-position: center 39px;
+  padding-top: 50px;
+  background-size: 60px;
+}
+.slide-text-quote{
+  font-size: 18px;
+  font-weight: 300;
+}
+.slide-text-name {
+    font-weight: 700;
+    font-size: 16px;
+    display: block;
+}
+.slide-text-title {
+    font-size: 16px;
+    color: #b8b8ba;
+    font-weight: 500;
+    display: block;
+}
+.slide-image {
+    width: 250px;
+    position:relative;
+    top: 65px;
+    float: none;
+    z-index: 100;
+    border-radius: 6px;
+    right:0;
+
+}
+.button-wrapper {
+  background: #FFF;
+  width: 80px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  bottom: 330px;
+  z-index: 102;
+  right: 40%;
+  border-radius: 30px;
+  box-shadow: -3px 9px 35px rgba(81, 67, 188, .35);
+}
+/* Responsive Breakpoints */
+
+@media (min-width: 576px) {
+  .jsSlider {
+    height: 1800px;
+    max-width: 576px;
+  }
+  .slide-image {
+    width: 250px;
+    position: relative;
+    top: 15.5%;
+    float: right;
+    z-index: 100;
+    border-radius: 6px;
+    right:12%
+
+}
+}
+@media (min-width: 768px) {
+  .jsSlider {
+    height: 700px;
+    max-width: 1200px;
+  }
+}
+@media (min-width: 1200px) {
+  .jsSlider {
+    max-width: 1440px;
+    height:800px;
+    background-size: 740px;
+    background-position: 92% 37%;
+}
+
+.jsSlider-slide {
+    height:800px;
+    padding: 0 0 0 11%;
+    background-size:50%;
+}
+
+.jsSlider-button {
+    width: 60px;
+}
+.slide-text-wrapper {
     font-family: Inter, Helvetica, sans-serif;
-    width: 625px;
+    width: 44%;
     position: absolute;
     top: 30%;
     z-index: 101;
     background-image: url(../images/pattern-quotes.svg);
     background-repeat: no-repeat;
-    background-position-x: 95px;
+    background-position: 100px 5px;
     padding-top: 36px;
+    background-size: 118px;
 }
 .slide-text-quote{
   font-size: 32px;
@@ -116,10 +209,13 @@ body{
 .slide-text-name {
     font-weight: 700;
     font-size: 22px;
+    display: inline-block;
 }
 .slide-text-title {
-    color: #b8b8ba;
+  font-size: 22px;
+  color: #b8b8ba;
     font-weight: 500;
+    display: inline-block;
 }
 .slide-image {
     width: 560px;
@@ -128,6 +224,8 @@ body{
     float: right;
     z-index: 100;
     border-radius: 6px;
+    right:12%
+
 }
 .button-wrapper {
     background: #FFF;
@@ -140,4 +238,5 @@ body{
     right: -780px;
     border-radius: 30px;
     box-shadow: 0 9px 35px rgba(0, 0, 0, .35);
+}
 }
