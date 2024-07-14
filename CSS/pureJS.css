@@ -89,7 +89,7 @@ body{
     background-image: url(../images/pattern-curve.svg);
     background-repeat: no-repeat;
     background-position:left bottom;
-    background-size: 50%;
+    background-size: 75%;
     text-align: center;
 }
 
@@ -151,6 +151,7 @@ body{
   border-radius: 30px;
   box-shadow: -3px 9px 35px rgba(81, 67, 188, .35);
 }
+
 /* Responsive Breakpoints */
 
 @media (min-width: 576px) {
@@ -163,32 +164,11 @@ body{
     background-position: center 35px;
   }
   .jsSlider-slide {
-      min-width: 100%;
       height:1024px;
-      box-sizing: border-box;
-      color: #000;
-      padding: 0 30px 0 30px;
-      text-align: center;
-  }
-  .jsSlider-button {
-      background: transparent;
-      border: none;
-      outline: none;
-      padding: 10px;
-      cursor: pointer;
-      text-align: center;
-      width: 60px;
+      background-size: 50%;
   }
   .slide-text-wrapper {
-    font-family: Inter, Helvetica, sans-serif;
-    width: 100%;
-    position:relative;
     top: 12%;
-    z-index: 101;
-    background-image: url(../images/pattern-quotes.svg);
-    background-repeat: no-repeat;
-    background-position: center 39px;
-    padding-top: 50px;
     background-size: 95px;
   }
   .slide-text-quote{
@@ -211,19 +191,11 @@ body{
       top: 80px;
   }
   .button-wrapper {
-    background: #FFF;
-    width: 80px;
-    height: 40px;
-    display: flex;
-    position: absolute;
     top: 450px;
     z-index: 102;
-    right: 40%;
-    border-radius: 30px;
-    box-shadow: -3px 9px 35px rgba(81, 67, 188, .35);
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .jsSlider {
     height: 667px;
     max-width: 1200px;
