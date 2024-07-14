@@ -17,7 +17,7 @@ body{
   .headerMain {
     background: #222;
     padding:16px;
-}
+  }
 .headerMain-outter{
   -ms-flex-pack: justify;
   -webkit-justify-content: space-between;
@@ -56,7 +56,10 @@ body{
 .headerMain-textArea{
   padding-left: 36px;;
   margin-right: auto;
+  font-size: 16px;;
 }
+
+/* Slider Mobile (375px) */
 .jsSlider {
   position: relative;
   overflow: hidden;
@@ -85,9 +88,8 @@ body{
     padding: 0 30px 0 30px;
     background-image: url(../images/pattern-curve.svg);
     background-repeat: no-repeat;
-    background-position-x: 0;
-    background-position-y: bottom;
-    background-size: 260px;
+    background-position:left bottom;
+    background-size: 50%;
     text-align: center;
 }
 
@@ -104,7 +106,7 @@ body{
   font-family: Inter, Helvetica, sans-serif;
   width: 100%;
   position:relative;
-  top: 10%;
+  top: 12%;
   z-index: 101;
   background-image: url(../images/pattern-quotes.svg);
   background-repeat: no-repeat;
@@ -143,7 +145,7 @@ body{
   height: 40px;
   display: flex;
   position: absolute;
-  bottom: 330px;
+  top: 295px;
   z-index: 102;
   right: 40%;
   border-radius: 30px;
@@ -152,62 +154,103 @@ body{
 /* Responsive Breakpoints */
 
 @media (min-width: 576px) {
-  .jsSlider {
-    height: 1800px;
-    max-width: 576px;
+  .headerMain-textArea{
+    font-size: 24px;;
   }
-  .slide-image {
-    width: 250px;
-    position: relative;
-    top: 15.5%;
-    float: right;
-    z-index: 100;
-    border-radius: 6px;
-    right:12%
-
-}
-}
-@media (min-width: 768px) {
   .jsSlider {
-    height: 700px;
-    max-width: 1200px;
+    height: 1024px;
+    background-size: 500px;
+    background-position: center 35px;
   }
-}
-@media (min-width: 1200px) {
-  .jsSlider {
-    max-width: 1440px;
-    height:800px;
-    background-size: 740px;
-    background-position: 92% 37%;
-}
-
-.jsSlider-slide {
-    height:800px;
-    padding: 0 0 0 11%;
-    background-size:50%;
-}
-
-.jsSlider-button {
-    width: 60px;
-}
-.slide-text-wrapper {
+  .jsSlider-slide {
+      min-width: 100%;
+      height:1024px;
+      box-sizing: border-box;
+      color: #000;
+      padding: 0 30px 0 30px;
+      text-align: center;
+  }
+  .jsSlider-button {
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 10px;
+      cursor: pointer;
+      text-align: center;
+      width: 60px;
+  }
+  .slide-text-wrapper {
     font-family: Inter, Helvetica, sans-serif;
-    width: 44%;
-    position: absolute;
-    top: 30%;
+    width: 100%;
+    position:relative;
+    top: 12%;
     z-index: 101;
     background-image: url(../images/pattern-quotes.svg);
     background-repeat: no-repeat;
-    background-position: 100px 5px;
+    background-position: center 39px;
+    padding-top: 50px;
+    background-size: 95px;
+  }
+  .slide-text-quote{
+    font-size: 28px;
+    font-weight: 300;
+  }
+  .slide-text-name {
+      font-weight: 700;
+      font-size: 24px;
+      display: block;
+  }
+  .slide-text-title {
+      font-size: 24px;
+      color: #b8b8ba;
+      font-weight: 500;
+      display: block;
+  }
+  .slide-image {
+      width: 390px;
+      top: 80px;
+  }
+  .button-wrapper {
+    background: #FFF;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    position: absolute;
+    top: 450px;
+    z-index: 102;
+    right: 40%;
+    border-radius: 30px;
+    box-shadow: -3px 9px 35px rgba(81, 67, 188, .35);
+  }
+}
+@media (min-width: 768px) {
+  .jsSlider {
+    height: 667px;
+    max-width: 1200px;
+    background-size: 580px;
+    background-position: 92% 37%;
+  }
+  .jsSlider-slide{
+    height:667px;
+    text-align: left;
+    padding: 0 0 0 11%;
+  }
+  .jsSlider-button {
+    width: 60px;
+}
+.slide-text-wrapper {
+    width: 47%;
+    position: absolute;
+    top: 25%;
+    z-index: 101;
+    background-position: 85px 10px;
     padding-top: 36px;
-    background-size: 118px;
+    background-size: 100px;
 }
 .slide-text-quote{
-  font-size: 32px;
-  font-weight: 300;
+  font-size: 28px;
 }
 .slide-text-name {
-    font-weight: 700;
     font-size: 22px;
     display: inline-block;
 }
@@ -218,25 +261,83 @@ body{
     display: inline-block;
 }
 .slide-image {
-    width: 560px;
-    position: relative;
-    top: 15.5%;
+    width: 455px;
+    top:14.5%;
     float: right;
     z-index: 100;
-    border-radius: 6px;
-    right:12%
-
+    right:11.5%
 }
 .button-wrapper {
-    background: #FFF;
     width: 120px;
     height: 60px;
-    display: flex;
     position: relative;
-    bottom: 145px;
+    top: -145px;
     z-index: 102;
-    right: -780px;
-    border-radius: 30px;
-    box-shadow: 0 9px 35px rgba(0, 0, 0, .35);
+    right: -650px;
+}  
 }
+@media (min-width: 1200px) {
+  .jsSlider {
+    max-width: 1440px;
+    height:800px;
+    background-size: 740px;
+    background-position: 92% 37%;
+  }
+
+  .jsSlider-slide {
+      height:800px;
+      padding: 0 0 0 11%;
+      background-size:50%;
+  }
+
+  .jsSlider-button {
+      width: 60px;
+  }
+  .slide-text-wrapper {
+      width: 44%;
+      position: absolute;
+      top: 30%;
+      z-index: 101;
+      background-position: 100px 5px;
+      padding-top: 36px;
+      background-size: 118px;
+  }
+  .slide-text-quote{
+    font-size: 32px;
+  }
+  .slide-text-name {
+      font-size: 22px;
+      display: inline-block;
+  }
+  .slide-text-title {
+    font-size: 22px;
+    color: #b8b8ba;
+      font-weight: 500;
+      display: inline-block;
+  }
+  .slide-image {
+      width: 560px;
+      top: 15.5%;
+      float: right;
+      z-index: 100;
+      right:12%
+
+  }
+  .button-wrapper {
+      width: 120px;
+      height: 60px;
+      position: relative;
+      top: -150px;
+      z-index: 102;
+      right: -800px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1100px) {
+  .jsSlider-slide{
+    padding: 0 0 0 5%;
+  }
+  
+ .slide-image {
+  right:5%;
+  }
 }
